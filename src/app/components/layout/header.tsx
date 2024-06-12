@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Disclosure,
   DisclosureButton,
@@ -18,7 +20,7 @@ function classNames(...classes: string[]) {
 export default function Header() {
   return (
     <Disclosure as="nav" className="bg-white shadow">
-      {({ open }) => (
+     {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between">
