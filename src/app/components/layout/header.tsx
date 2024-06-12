@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import {
   Disclosure,
@@ -9,18 +9,19 @@ import {
   MenuItem,
   MenuItems,
   Transition,
-} from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { PlusIcon } from "@heroicons/react/20/solid";
+} from '@headlessui/react';
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { PlusIcon } from '@heroicons/react/20/solid';
+import NavItem from './nav-item';
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Header() {
   return (
     <Disclosure as="nav" className="bg-white shadow">
-     {({ open }) => (
+      {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between">
@@ -45,6 +46,7 @@ export default function Header() {
                   />
                 </div>
                 <div className="hidden md:ml-6 md:flex md:space-x-8">
+                  <NavItem />
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                   <a
                     href="#"
@@ -63,12 +65,6 @@ export default function Header() {
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Projects
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                  >
-                    Calendar
                   </a>
                 </div>
               </div>
@@ -119,8 +115,8 @@ export default function Header() {
                             <a
                               href="#"
                               className={classNames(
-                                focus ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700",
+                                focus ? 'bg-gray-100' : '',
+                                'block px-4 py-2 text-sm text-gray-700',
                               )}
                             >
                               Your Profile
@@ -132,8 +128,8 @@ export default function Header() {
                             <a
                               href="#"
                               className={classNames(
-                                focus ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700",
+                                focus ? 'bg-gray-100' : '',
+                                'block px-4 py-2 text-sm text-gray-700',
                               )}
                             >
                               Settings
@@ -145,8 +141,8 @@ export default function Header() {
                             <a
                               href="#"
                               className={classNames(
-                                focus ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700",
+                                focus ? 'bg-gray-100' : '',
+                                'block px-4 py-2 text-sm text-gray-700',
                               )}
                             >
                               Sign out
@@ -184,13 +180,6 @@ export default function Header() {
                 className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 sm:pl-5 sm:pr-6"
               >
                 Projects
-              </DisclosureButton>
-              <DisclosureButton
-                as="a"
-                href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 sm:pl-5 sm:pr-6"
-              >
-                Calendar
               </DisclosureButton>
             </div>
             <div className="border-t border-gray-200 pb-3 pt-4">
