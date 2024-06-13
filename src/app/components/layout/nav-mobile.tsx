@@ -13,7 +13,7 @@ export default function NavMobile() {
   const pathname = pathnameRemoveLang(originalPathname);
 
   const links: NavItem[] = [
-    { name: t('dashboard'), href: '/en/member/dashboard' },
+    { name: t('dashboard'), href: '/member/dashboard' },
     { name: t('team'), href: '/member/team' },
     { name: t('projects'), href: '/member/projects' },
   ];

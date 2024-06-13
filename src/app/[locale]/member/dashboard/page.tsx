@@ -1,3 +1,9 @@
+import FormWrapper from '@/app/components/form/form-wrapper';
+
 export default function Dashboard() {
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <FormWrapper />
+    </div>
+  );
 }

@@ -21,6 +21,23 @@
     "x": "X",
     "copyRight": "2020 Your Company, Inc. All rights reserved."
   },
+  "Form": {
+    "firstname": "First Name",
+    "firstnamePlaceholder": "Enter first name",
+    "firstnameError": "Please provie first name",
+    "number": "Number",
+    "numberPlaceholder": "Enter Number",
+    "numberError": "Please provie a Number",
+    "text": "Text",
+    "textPlaceholder": "Enter text",
+    "textError": "Please provie a text",
+    "email": "E-Mail",
+    "emailPlaceholder": "Enter E-Mail",
+    "emailError": "Please provie a valid E-Mail",
+    "password": "Password",
+    "passwordPlaceholder": "Enter Password",
+    "passwordError": "Please provie a Password"
+  },
   "Index": {
     "title": "Hello world!"
   }
