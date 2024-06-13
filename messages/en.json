@@ -36,7 +36,11 @@
     "emailError": "Please provie a valid E-Mail",
     "password": "Password",
     "passwordPlaceholder": "Enter Password",
-    "passwordError": "Please provie a Password"
+    "passwordError": "Please provie a Password",
+    "select": "Select",
+    "selectError": "Please chose an option",
+    "checkbox": "Select",
+    "checkboxError": "Please chose checkbox"
   },
   "Index": {
     "title": "Hello world!"

@@ -1,7 +1,24 @@
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid';
 import CustomInput from './custom-input';
-import { InputType } from '@/app/lib/contants';
+import { InputType, MultiSelectOption } from '@/app/lib/contants';
 import { useTranslations } from 'next-intl';
+import CustomSelect from './custom-select';
+import CustomChoice from './custom-choice';
+
+const selectItems: MultiSelectOption[] = [
+  {
+    value: 1,
+    label: 'United States',
+  },
+  {
+    value: 2,
+    label: 'Canada',
+  },
+  {
+    value: 3,
+    label: 'Mexico',
+  },
+];
 
 export default function FormWrapper() {
   const t = useTranslations('Form');
@@ -42,6 +59,18 @@ export default function FormWrapper() {
         placeholder={t('passwordPlaceholder')}
         initialValue={'123'}
         type={InputType.Password}
+      />
+      <CustomSelect
+        items={selectItems}
+        name="select"
+        label={t('select')}
+        initialValue={3}
+      />
+      <CustomChoice
+        items={selectItems}
+        name="checkbox"
+        label={t('checkbox')}
+        initialValue={3}
       />
     </form>
   );

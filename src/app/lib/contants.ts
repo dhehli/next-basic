@@ -25,3 +25,8 @@ export enum ChoiceType {
   Radio = 'radio',
   Checkbox = 'checkbox',
 }
+
+export type MultiSelectOption = {
+  value: number;
+  label: string;
+};
