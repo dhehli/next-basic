@@ -1,4 +1,9 @@
 {
+  "Header": {
+    "dashboard": "Dashboard",
+    "team": "Team",
+    "projects": "Projekte"
+  },
   "Index": {
     "title": "Hello welt!"
   }
