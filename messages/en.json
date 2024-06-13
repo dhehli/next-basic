@@ -7,6 +7,18 @@
     "settings": "Settings",
     "signOut": "Sign out"
   },
+  "Footer": {
+    "about": "About",
+    "blog": "Blog",
+    "jobs": "Jobs",
+    "press": "Press",
+    "accessibility": "Accessibility",
+    "partners": "Partners",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "x": "X",
+    "copyRight": "2020 Your Company, Inc. All rights reserved."
+  },
   "Index": {
     "title": "Hello world!"
   }
