@@ -5,11 +5,6 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-interface NavItem {
-  name: string;
-  href: string;
-}
-
 export default function NavMobile() {
   const t = useTranslations("Header");
   const pathname = usePathname();
@@ -63,7 +58,7 @@ export default function NavMobile() {
             className="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >
             <span className="absolute -inset-1.5" />
-            <span className="sr-only">View notifications</span>
+            <span className="sr-only">{t('srViewNotifications')}</span>
             <BellIcon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>

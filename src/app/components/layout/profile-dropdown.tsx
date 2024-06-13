@@ -3,11 +3,6 @@ import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/r
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
-interface NavItem {
-  name: string;
-  href: string;
-}
-
 export default function ProfileDropDown() {
   const t = useTranslations("Header");
 

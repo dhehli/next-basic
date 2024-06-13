@@ -5,7 +5,9 @@
     "projects": "Projects",
     "profile": "Your Profile",
     "settings": "Settings",
-    "signOut": "Sign out"
+    "signOut": "Sign out",
+    "srOpenMenu": "Open main menu",
+    "srViewNotifications": "View notifications"
   },
   "Footer": {
     "about": "About",
