@@ -1,20 +1,17 @@
 'use client';
 
-import {
-  Disclosure,
-  DisclosureButton,
-
-} from '@headlessui/react';
+import { Disclosure, DisclosureButton } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { PlusIcon } from '@heroicons/react/20/solid';
 import NavItems from './nav-items';
 import ProfileDropDown from './profile-dropdown';
 import NavMobile from './nav-mobile';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function Header() {
-  const t = useTranslations("Header");
-  
+  const t = useTranslations('Header');
+
   return (
     <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (
@@ -35,14 +32,16 @@ export default function Header() {
                   </DisclosureButton>
                 </div>
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="Your Company"
-                  />
+                  <Link href={'/member/dashboard'}>
+                    <img
+                      className="h-8 w-auto"
+                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                      alt="Your Company"
+                    />
+                  </Link>
                 </div>
                 <div className="hidden md:ml-6 md:flex md:space-x-8">
-                  <NavItems />                  
+                  <NavItems />
                 </div>
               </div>
               <div className="flex items-center">
@@ -65,12 +64,12 @@ export default function Header() {
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
 
-                 <ProfileDropDown />
+                  <ProfileDropDown />
                 </div>
               </div>
             </div>
-          </div>                      
-         <NavMobile />
+          </div>
+          <NavMobile />
         </>
       )}
     </Disclosure>
