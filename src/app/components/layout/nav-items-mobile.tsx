@@ -9,7 +9,7 @@ interface NavItem {
   href: string;
 }
 
-export default function NavItems() {
+export default function NavItemsMobile() {
   const t = useTranslations("Header");
   const pathname = usePathname();
 
