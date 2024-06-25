@@ -1,9 +1,10 @@
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid';
 import CustomInput from './custom-input';
-import { InputType, MultiSelectOption } from '@/app/lib/contants';
+import { ChoiceType, InputType, MultiSelectOption } from '@/app/lib/contants';
 import { useTranslations } from 'next-intl';
 import CustomSelect from './custom-select';
 import CustomChoice from './custom-choice';
+import CustomButton from './custom-button';
 
 const selectItems: MultiSelectOption[] = [
   {
@@ -68,10 +69,19 @@ export default function FormWrapper() {
       />
       <CustomChoice
         items={selectItems}
+        name="radio"
+        label={t('radio')}
+        initialValue={3}
+        type={ChoiceType.Radio}
+      />
+      <CustomChoice
+        items={selectItems}
         name="checkbox"
         label={t('checkbox')}
-        initialValue={3}
+        initialValue={2}
+        type={ChoiceType.Checkbox}
       />
+      <CustomButton buttonText={t('submit')} />
     </form>
   );
 }

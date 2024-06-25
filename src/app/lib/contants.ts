@@ -7,7 +7,12 @@ export interface FormField {
   name: string;
   label?: string;
   value?: string | number;
-  initialValue?: string | number | readonly string[] | undefined;
+  initialValue?:
+    | string
+    | number
+    | readonly string[]
+    | readonly string[]
+    | undefined;
   placeholder?: string;
   toggle?: boolean;
   disabled?: boolean;

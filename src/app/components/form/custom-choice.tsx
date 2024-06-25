@@ -28,14 +28,14 @@ export default function CustomChoice({
           {items.map((item, index) => (
             <div key={index} className="flex items-center">
               <input
-                id={item.}
+                id={id}
                 name="notification-method"
-                type="radio"
-                defaultChecked={item.id === 'email'}
+                type={type}
+                defaultChecked={item.value === initialValue}
                 className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
               />
               <label
-                htmlFor={item.id}
+                htmlFor={id}
                 className="ml-3 block text-sm  leading-6 text-gray-900"
               >
                 {item.label}

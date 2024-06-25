@@ -39,8 +39,11 @@
     "passwordError": "Please provie a Password",
     "select": "Select",
     "selectError": "Please chose an option",
+    "radio": "Select",
+    "radioError": "Please chose checkbox",
     "checkbox": "Select",
-    "checkboxError": "Please chose checkbox"
+    "checkboxError": "Please chose checkbox",
+    "submit": "Send"
   },
   "Index": {
     "title": "Hello world!"
