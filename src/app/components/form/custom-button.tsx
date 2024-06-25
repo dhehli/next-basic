@@ -1,5 +1,3 @@
-import { ChoiceType, FormField, MultiSelectOption } from '@/app/lib/contants';
-
 type ButtonProps = {
   buttonText: string;
 };
