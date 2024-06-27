@@ -1,4 +1,4 @@
-import { fetchPosts } from '@/app/api/actions';
+import { fetchPosts } from '@/app/api/posts';
 import { formatDateToLocal } from '@/app/lib/utils';
 
 export default async function Projects() {
