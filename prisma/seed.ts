@@ -11,7 +11,7 @@ async function main() {
   });
 
   const post2 = await prisma.post.upsert({
-    where: { id: 1 },
+    where: { id: 2 },
     update: {},
     create: {
       title: 'my second post',

@@ -18,6 +18,7 @@ bun dev
 
 ```bash
 npx prisma db seed
+npx prisma generate
 npx prisma migrate dev --name [migration_name]
 ```
 
