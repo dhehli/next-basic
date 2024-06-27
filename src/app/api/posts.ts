@@ -18,3 +18,19 @@ export async function fetchPosts() {
     throw new Error('Failed to fetch post data.');
   }
 }
+
+export async function fetchPostById(id: number) {
+  noStore();
+
+  try {
+    const post = await prisma.post.findUnique({
+      where: {
+        id,
+      },
+    });
+    return post;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch post.');
+  }
+}
