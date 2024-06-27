@@ -15,7 +15,7 @@ export default function NavMobile() {
   const links: NavItem[] = [
     { name: t('dashboard'), href: '/member/dashboard' },
     { name: t('team'), href: '/member/team' },
-    { name: t('projects'), href: '/member/projects' },
+    { name: t('posts'), href: '/member/posts' },
   ];
 
   const dropDownLinks: NavItem[] = [

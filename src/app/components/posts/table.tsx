@@ -1,7 +1,11 @@
 import { fetchPosts } from '@/app/api/posts';
 import { formatDateToLocal } from '@/app/lib/utils';
+import { PlusIcon } from '@heroicons/react/24/outline';
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
-export default async function Projects() {
+export default async function PostTable() {
+  const t = useTranslations('Posts.List');
   const posts = await fetchPosts();
 
   return (
@@ -9,19 +13,16 @@ export default async function Projects() {
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-base font-semibold leading-6 text-gray-900">
-            Posts
+            {t('pageTitle')}
           </h1>
-          <p className="mt-2 text-sm text-gray-700">
-            A list of all the posts fetched from the API.
-          </p>
         </div>
         <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-          <button
-            type="button"
+          <Link
+            href="/member/posts/create"
             className="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
-            Add post
-          </button>
+            <span className="hidden md:block">{t('addPost')}</span>
+          </Link>
         </div>
       </div>
       <div className="mt-8 flow-root">
@@ -34,22 +35,25 @@ export default async function Projects() {
                     scope="col"
                     className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0"
                   >
-                    #
+                    {t('id')}
                   </th>
                   <th
                     scope="col"
                     className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                   >
-                    Title
+                    {t('title')}
                   </th>
                   <th
                     scope="col"
                     className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                   >
-                    Created
+                    {t('created')}
                   </th>
                   <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-0">
-                    <span className="sr-only">Edit</span>
+                    <span className="sr-only">{t('edit')}</span>
+                  </th>
+                  <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-0">
+                    <span className="sr-only">{t('detail')}</span>
                   </th>
                 </tr>
               </thead>
@@ -66,12 +70,22 @@ export default async function Projects() {
                       {formatDateToLocal(post.createdAt.toDateString())}
                     </td>
                     <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-                      <a
-                        href="#"
+                      <Link
+                        href={`/member/posts/${post.id}/edit`}
                         className="text-indigo-600 hover:text-indigo-900"
                       >
-                        Edit<span className="sr-only">, {post.title}</span>
-                      </a>
+                        {t('edit')}
+                        <span className="sr-only">, {post.title}</span>
+                      </Link>
+                    </td>
+                    <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      <Link
+                        href={`/member/posts/${post.id}`}
+                        className="text-indigo-600 hover:text-indigo-900"
+                      >
+                        {t('detail')}
+                        <span className="sr-only">, {post.title}</span>
+                      </Link>
                     </td>
                   </tr>
                 ))}

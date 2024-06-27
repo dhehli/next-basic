@@ -2,7 +2,7 @@
   "Header": {
     "dashboard": "Dashboard",
     "team": "Team",
-    "projects": "Projects",
+    "posts": "Posts",
     "profile": "Your Profile",
     "settings": "Settings",
     "signOut": "Sign out",
@@ -47,5 +47,17 @@
   },
   "Index": {
     "title": "Hello world!"
+  },
+  "Posts": {
+    "List": {
+      "pageTitle": "List of all posts",
+      "addPost": "Add post",
+      "id": "#",
+      "title": "Title",
+      "created": "Created",
+      "edit": "Edit",
+      "detail": "Detail"
+    },
+    "Form": {}
   }
 }
