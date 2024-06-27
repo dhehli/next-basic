@@ -1,6 +1,16 @@
+'use server';
+
 import { unstable_noStore as noStore } from 'next/cache';
+import { revalidatePath } from 'next/cache';
+import { redirect } from 'next/navigation';
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
+import { z } from 'zod';
+
+const FormSchema = z.object({
+  id: z.string(),
+  title: z.string().min(1, 'Title is required'),
+});
 
 export async function fetchPosts() {
   // Add noStore() here to prevent the response from being cached.
@@ -20,6 +30,22 @@ export async function fetchPosts() {
 }
 
 export async function fetchPostById(id: number) {
+  noStore();
+
+  try {
+    const post = await prisma.post.findUnique({
+      where: {
+        id,
+      },
+    });
+    return post;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch post.');
+  }
+}
+
+export async function createPost(formData: FormData) {
   noStore();
 
   try {
